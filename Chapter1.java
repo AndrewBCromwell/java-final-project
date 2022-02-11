@@ -35,7 +35,16 @@ public class Chapter1 implements TaskHandler {
 
     public void exercise1(Scanner in) {
         UIUtility.showMenuTitle("Exercise 1");
-        // Your code here
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxx\nx Get Largest Number x\n"
+                            + "xxxxxxxxxxxxxxxxxxxxxx\n");
+        double firstNumber = InputUtility.getDouble("Enter a number: ", in);
+        double secondNumber = InputUtility.getDouble("Enter another number: ", in);
+        if ( firstNumber > secondNumber) {
+            System.out.println("The larger number is: " + firstNumber);
+        }
+        else {
+            System.out.println("The larger number is: " + secondNumber);
+        }
     }
 
     public void exercise2(Scanner in) {
