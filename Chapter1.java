@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import static java.lang.Math.PI;
 public class Chapter1 implements TaskHandler {
     @Override
     public void handleTask(Scanner in) {
@@ -49,12 +50,21 @@ public class Chapter1 implements TaskHandler {
 
     public void exercise2(Scanner in) {
         UIUtility.showMenuTitle("Exercise 2");
-        // Your code here
+        System.out.println("xxxxxxxxxxxxxxx\nx Get Average x\nxxxxxxxxxxxxxxx\n");
+        double firstNumber = InputUtility.getDouble("Enter a number: ", in);
+        double secondNumber = InputUtility.getDouble("Enter another number: ", in);
+        double average = (firstNumber + secondNumber) / 2;
+        System.out.printf("The average is %.1f", average);
     }
 
     public void exercise3(Scanner in) {
         UIUtility.showMenuTitle("Exercise 3");
-        // Your code here
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxxxx\nx Get Area of a Circle x\n" +
+                            "xxxxxxxxxxxxxxxxxxxxxxxx");
+        double radius = InputUtility.getDouble("Enter the radius: ", in);
+        double circumference = 2 * PI * radius;
+        double area = PI * radius * radius;
+        System.out.printf("The circumference is %.2f, and the area is %.2f.", circumference, area);
     }
 
     public void sampleExercise(Scanner in) {
