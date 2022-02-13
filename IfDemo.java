@@ -14,9 +14,11 @@ public class IfDemo {
 
         if(name1.equals(name2)) {
             System.out.println("We've got 2 Marcs!");
+            
         }
-
-        int num1 = 5 , num2 = 6;
+        int num1, num2;
+        num1 = 5 ;
+        num2 = 6;
         if (num1 == 5 && num2 == 6) {
             System.out.println("you can assign 2 variables on the same line");
         }
