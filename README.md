@@ -27,3 +27,24 @@ In Chapter 2, I learned about variable scope. A variable's scope is the code blo
 I also learned the difference between primitive and class data types. With primitive data types, such as *__int__*, _**char**_, **_boolean_**, and __*double*__, you can use the arithmetic operators `+ - * / %` to work with the number related data types and the relational operators `== > < >= <=` to compare any of these variables to other variables or literals of the same data type. Class data types, such as *__String__* and _**Bigdecimal**_, use reference variables, where the variable holds the address of a location in memory that holds the data. You should not use the regular operators with these variables, instead you should use methods built into the classes. You would use `varName.multipy(otherBigDecimal);` to multiply BigDecimal values and would use `varName.equals("Some string value");` to check if two strings are the same.
 
 The *__Math__* class was also introduced, which when imported allows you to use other math operations. For example `Math.pow(value1, value2)` will raise the first value to the power of the second value and `Math.sqrt(value)` will take the square root of the value. You can also use `Math.PI` to return the mathematic value of Pi.
+
+## Chapter 3
+Chapter 3 talked about the `if, else if, else` structure, which I already knew from a previous course, but it also introduced the switch statement. You form a switch statement like this:
+```
+switch(variable){
+    case value1:
+        do this ...
+        break;
+    case value2:
+        do this ...
+        break;
+    etc.
+    .
+    .
+    default:
+        do this ...
+}
+```
+The switch statement checks the value of the variable and preforms the code in the case that corresponds with that value. If non of the values match, the default runs. This allows you to avoid needing to do something like `if...else if...else if...else if...else` .
+
+We discussed the **for loop**, which only runs a certain number of times, the **while loop**, which only runs if a condition is true but continues running until the condition is not true, and the **do-while loop**, which always runs at least once and then runs again if the condition is true. If you want to start the next round of the loop without preforming the rest of the code in the loop, use `continue;`. If you want to end the loop early, use `break;`. `continue` and `break` should go inside an if or switch statement within the loop.
