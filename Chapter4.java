@@ -54,3 +54,17 @@ public class Chapter4 implements TaskHandler {
         
     }
 }
+
+// public Fraction simplify(){
+
+// }
+
+// public String mixedNumber(){
+//     Fraction simpifiedfraction = simplify();
+//     if(simpifiedfraction.numerator > simpifiedfraction.denominator){
+//         // Take the numerator devided by the denominator
+//         // find the remainder of dividing the numerator by the denominator
+//     }
+//     }
+
+// }

@@ -48,3 +48,30 @@ switch(variable){
 The switch statement checks the value of the variable and preforms the code in the case that corresponds with that value. If non of the values match, the default runs. This allows you to avoid needing to do something like `if...else if...else if...else if...else` .
 
 We discussed the **for loop**, which only runs a certain number of times, the **while loop**, which only runs if a condition is true but continues running until the condition is not true, and the **do-while loop**, which always runs at least once and then runs again if the condition is true. If you want to start the next round of the loop without preforming the rest of the code in the loop, use `continue;`. If you want to end the loop early, use `break;`. `continue` and `break` should go inside an if or switch statement within the loop.
+
+## Chapter 4
+In chapter 4 I learned about __*classes*__. I have also been learning about classes in the __*.NET*__ course I am taking, and there are some differences between it and Java. In Java, we have been putting multiple classes in a single file. Only one of these classes is allowed to be declared as `public`, and that is the class that has the same name as the file. This may be possible in .NET, but in that course we have only been making one class per file and putting a `using` statement at the top of any file that needs to use the class from that file.
+ 
+A class is a template for creating an object, and thus should include fields, a.k.a. instance variables, to hold values that will be specific to the object that gets created. There must be a constructor, which is a method with the same name as the class, that gets called when an object is created to give values to the fields. There should also be getter and setter methods for these variables, which you form like this:
+ 
+```Java
+public returntype getInstanceVariableName(){
+    return instanceVariableName;
+}
+ 
+public void setInstanceVariableName(datatype parameterName){
+    // some validation code
+    this.instanceVariableName = parameterName;
+}
+```
+ 
+In .NET we can simply use a property like:
+ 
+```C#
+public datatype PropertyName{ get; set; }
+```
+ 
+There are also methods that use the values stored in the fields, as well as arguments provided for the method's parameters from where the method was called, to either do something or return a value to wherever the method was called from. When defining a method, you must specify the return type before the method's name, void if there is no return.
+ 
+More than one object can be made from the same class. For example, a car is a type of thing, but your car is a specific instance of that type of thing. Car would be a class and your car would be an object.
+
