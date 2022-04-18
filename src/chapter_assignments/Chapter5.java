@@ -1,7 +1,7 @@
 package src.chapter_assignments;
-import scr.utilitys.TaskHandler;
+import src.utilitys.TaskHandler;
 import src.utilitys.UIUtility;
-import scr.utilitys.InputUtility;
+import src.utilitys.InputUtility;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
