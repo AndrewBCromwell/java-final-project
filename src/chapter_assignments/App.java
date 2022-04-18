@@ -1,3 +1,7 @@
+package src.chapter_assignments;
+import src.utilitys.UIUtility;
+import src.utilitys.InputUtility;
+import src.utilitys.TaskHandler;
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
@@ -7,7 +11,8 @@ public class App {
             String menuTitle = "Main Menu";
             String prompt = "Select an chapter";
             String[] menuOptions = {
-                "Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "chapter 5 challenge"
+                "Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "chapter 5 challenge",
+                "Chapter 5"
             };
             choice = UIUtility.showMenuOptions(menuTitle, prompt, menuOptions, scanner);
             if (choice == 0)
@@ -30,6 +35,8 @@ public class App {
                 case 5:
                     new Chapter5Challenge().handleTask(scanner);
                     break;
+                case 6:
+                    new Chapter5().handleTask(scanner);
             }
             UIUtility.pressEnterToContinue(scanner);
         }

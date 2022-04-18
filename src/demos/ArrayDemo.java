@@ -1,3 +1,4 @@
+package src.demos;
 import java.util.Arrays;
 
 // class Book{
@@ -6,7 +7,7 @@ import java.util.Arrays;
 
 public class ArrayDemo {
     public static void main(String[] args){
-        String[] months = new String[12]; // Must specify number of elements when create, can't change later.
+        String[] months = new String[4]; // Must specify number of elements when create, can't change later.
         months[0] = "Jan"; // no method to just add
         months[1] = "Feb";
         months[2] = "Mar";
@@ -18,6 +19,11 @@ public class ArrayDemo {
         for(int i = 0; i < months.length; i++){ // don't use () when using length for array.
             System.out.println(months[i]);
         }
+
+        String[] months2 = months; // this dose not copy the array. months2 refrences the same array as months.
+
+        int location = Arrays.binarySearch(months, "Feb");
+        System.out.println("\n" + location + "\n");
 
         // Book[] bookshelf = new Book[10];
         // bookshelf[0] = new Book();
