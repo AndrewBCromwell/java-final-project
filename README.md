@@ -75,3 +75,19 @@ There are also methods that use the values stored in the fields, as well as argu
  
 More than one object can be made from the same class. For example, a car is a type of thing, but your car is a specific instance of that type of thing. Car would be a class and your car would be an object.
 
+## Chapter 5
+In chapter 5 I learned about arrays, which can hold multiple values of the other data types, such as ints, doubles, strings, and even objects of a types that you have created yourself. However, you can only store one type of data in a single array.
+
+There are a couple of ways to declare an array. One way is to assign the values that will be stored in the array immediately, like this:
+
+`int[] myArray = {value1, value2, value3};`
+
+The other way is to specify how many values can be stored in the array, like this:
+
+`int[] myArray = new int[3];`
+
+The number inside the second pair of [] is the number of values that can be stored in the array. After an array is created, you can not change the number of values that the array holds, although you can change a value held in one of the positions.
+
+To use or change the value at a specific index of an array you would use `arrayName[x]`, where x is the index of the value you want. The first value is at index `0`, and the last value is at index `arrayName.length - 1`. You will often see people use `for(int i = 0; i < myArray.length; i++)` to loop as many times as there are elements in the array and use i as an index to use the current value of interest. You can also use a for-each loop, like this `for(datatype currentValue : myArray)`, to loop through each value in the array, with each iteration of the loop assigning the next value in the array to currentValue.
+
+Chapter 5 also showed other methods that can be used on strings, including, but not limited to, `length()` which gives the number of characters in the string (use length without () to get the number of values in an array), `charAt(index)` which gives the character at the specified index of the string, `indexOf(anotherString)` which gives the index of the first time the other string appears in the string, and `compareTo(anotherString)` which gives the integer value that is the difference between the first character of each string. If `compareTo` returns a negative value, the first string comes alphabetically before the other, and vice versa.
