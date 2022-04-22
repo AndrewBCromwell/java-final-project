@@ -3,6 +3,8 @@ import src.utilitys.TaskHandler;
 import src.utilitys.UIUtility;
 import src.utilitys.InputUtility;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import static java.lang.Math.PI;
@@ -59,6 +61,8 @@ public class Chapter5 implements TaskHandler {
                 }
             }
         }
+        Collections.sort(evens);
+        Collections.sort(odds);
         System.out.println("Even Numbers: " + evens);
         System.out.println("Odd Numbers: " + odds);
     }

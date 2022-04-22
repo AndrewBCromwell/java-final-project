@@ -91,3 +91,22 @@ The number inside the second pair of [] is the number of values that can be stor
 To use or change the value at a specific index of an array you would use `arrayName[x]`, where x is the index of the value you want. The first value is at index `0`, and the last value is at index `arrayName.length - 1`. You will often see people use `for(int i = 0; i < myArray.length; i++)` to loop as many times as there are elements in the array and use i as an index to use the current value of interest. You can also use a for-each loop, like this `for(datatype currentValue : myArray)`, to loop through each value in the array, with each iteration of the loop assigning the next value in the array to currentValue.
 
 Chapter 5 also showed other methods that can be used on strings, including, but not limited to, `length()` which gives the number of characters in the string (use length without () to get the number of values in an array), `charAt(index)` which gives the character at the specified index of the string, `indexOf(anotherString)` which gives the index of the first time the other string appears in the string, and `compareTo(anotherString)` which gives the integer value that is the difference between the first character of each string. If `compareTo` returns a negative value, the first string comes alphabetically before the other, and vice versa.
+
+## Final Project User Stories
+- As a **LEGO collector**, I want to **add a LEGO set to a display shelf** so that I can **look at them and show them to visitors**. (MVP)
+- As a **LEGO collector**, I want to **change the order of displayed LEGO sets** so that I can **put them in a more appealing layout**. (Stretch goal)
+- As a **LEGO collector**, I want to **replace a LEGO set** so that I can **display the sets I most want to display at the time**. (Stretch goal because could be done without special method, just would take more than one step)
+- As a **LEGO collector**, I want to **remove a LEGO set form display** so that I can **make room for a set that I want to display but am not ready to yet**. (MVP)
+- As a **LEGO collector**, I want to **show the information about the sets I am displaying** so that **visitors can see what they are**. (MVP)
+- As a **LEGO collector**, I want to **update the data associated with certain sets if the data is wrong** so that I can **make sure the data is accurate**. (MVP)
+- As a **LEGO collector**, I want to **sort my LEGO sets by name, series, set number, or number of pieces**. (MVP)
+- As a **LEGO collector**, I want to **make custom builds by combining pieces from multiple LEGO sets** so that I can **show my creativity**. (stretch goal)
+- As a **LEGO collector**, I want to **find the total number of LEGO pieces on the display shelf**. (stretch goal)
+
+
+## Class Diagram
+
+| +LegoSet |
+| -------- |
+| -name: String<br>-setNumber: int<br>-numberOfPieces: int|
+| <\<create>> +LegoSet()<br> <\<create>> +LegoSet(name: String, setNumber: int, numberOfPieces: int)<br> +getName(): String<br> +setName(name: String): void<br> -validateName(name: String): void<br> +getSetNumber(): int<br> +setSetNumber(setNumber: int): void<br> -validateSetNumber(setNumber: int): void<br> +getNumberOfPieces(): int<br> +setNumberOfPieces(numberOfPieces: int): void<br> -validateNumberOfPieces(numberOfPieces: int): void<br> +toString(): String<br> +compareTo(other: LegoSet): int|
