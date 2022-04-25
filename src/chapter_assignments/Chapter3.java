@@ -1,7 +1,7 @@
-package src.chapter_assignments;
-import src.utilitys.TaskHandler;
-import src.utilitys.UIUtility;
-import src.utilitys.InputUtility;
+package chapter_assignments;
+import utilitys.TaskHandler;
+import utilitys.UIUtility;
+import utilitys.InputUtility;
 import java.util.Scanner;
 import static java.lang.Math.PI;
 import java.lang.NumberFormatException;

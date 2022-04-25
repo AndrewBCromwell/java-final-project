@@ -1,4 +1,4 @@
-package src.demos;
+package demos;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -85,9 +85,9 @@ class Donation {
     }
 }
 
-class Person {
-    String name;
-}
+// class Person {
+//     String name;
+//}
 
 
 public class MethodDemo {

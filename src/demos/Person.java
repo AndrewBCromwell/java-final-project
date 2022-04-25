@@ -1,4 +1,4 @@
-package src.demos;
+package demos;
 
 public class Person implements Comparable<Person> {
     private String firstName;

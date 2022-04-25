@@ -1,4 +1,4 @@
-package src.demos;
+package demos;
 import java.util.Arrays;
 
 // class Book{

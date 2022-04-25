@@ -1,4 +1,4 @@
-package src.demos;
+package demos;
 import java.util.Scanner;
 
 class Item { // singular, starts with capital

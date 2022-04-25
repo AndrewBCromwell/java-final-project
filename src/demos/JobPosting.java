@@ -1,4 +1,4 @@
-package src.demos;
+package demos;
 public class JobPosting {
     private String title;
     private String location;

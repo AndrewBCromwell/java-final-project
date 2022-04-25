@@ -1,4 +1,4 @@
-package src.demos;
+package demos;
 public class While {
     public static void main(String[] args) {
         int round = 1;

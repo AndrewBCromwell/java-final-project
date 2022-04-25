@@ -1,7 +1,7 @@
-package src.chapter_assignments;
-import src.utilitys.UIUtility;
-import src.utilitys.InputUtility;
-import src.utilitys.TaskHandler;
+package chapter_assignments;
+import utilitys.UIUtility;
+import utilitys.InputUtility;
+import utilitys.TaskHandler;
 import java.util.Scanner;
 import static java.lang.Math.PI;
 public class Chapter1 implements TaskHandler {

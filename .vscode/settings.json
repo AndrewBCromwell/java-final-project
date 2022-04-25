@@ -1,3 +1,10 @@
 {
-    "codetogether.virtualCursorJoin": "sharedVirtualCursor"
+    "codetogether.virtualCursorJoin": "sharedVirtualCursor",
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "latex",
+        "plaintext"
+    ]
 }
