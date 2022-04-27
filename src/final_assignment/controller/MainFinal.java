@@ -13,8 +13,8 @@ public class MainFinal {
             String menuTitle = "Main Menu";
             String prompt = "Select an action";
             String[] menuOptions = {
-                "Add LEGO set", "Remove LEGO set", "Show set data", "Chapter 4", "chapter 5 challenge",
-                "Chapter 5"
+                "Add LEGO set", "Remove LEGO set", "Show set data", "Update data", 
+                "Sort LEGO sets", "Change order", "Replace LEGO set", 
             };
             choice = UIUtility.showMenuOptions(menuTitle, prompt, menuOptions, scanner);
             if (choice == 0)

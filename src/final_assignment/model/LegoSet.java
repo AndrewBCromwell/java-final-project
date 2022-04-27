@@ -82,6 +82,11 @@ public class LegoSet implements Comparable<LegoSet> {
         }
     }
 
+    @Override
+    public String toString(){
+        return name + "\nLEGO " + series + "\n" + setNumber + "\n" + numberOfPieces + "pieces\n\n";
+    }
+
 
     @Override
     public int compareTo(LegoSet other){

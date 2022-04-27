@@ -69,6 +69,57 @@ public class Chapter5 implements TaskHandler {
 
     public void exercise2(Scanner in) {
         UIUtility.showMenuTitle("Exercise 2");
+        String str1 = InputUtility.getString("Enter a string", in);
+        int length1 = str1.length();
+        String first3chars1 = str1.substring(0, 3);
+        char lastChar1 = str1.charAt(length1 - 1);
+        boolean containsI1 = str1.contains("i");
+        String str1LowerCase = str1.toLowerCase();
+        StringBuilder strBuilder1 = new StringBuilder(); // information found on GeeksforGeeks 'Reverse a string in Java'
+        strBuilder1.append(str1LowerCase.replace(" ", ""));
+        boolean isPalindrome1;
+        if(strBuilder1.equals(strBuilder1.reverse())){
+            isPalindrome1 = true;
+        }else{
+            isPalindrome1 = false;
+        }
+        System.out.println("**Statistics**\n" +
+                            "Length: " + length1 +
+                            "\nFirst 3 characters: " + first3chars1 +
+                            "\nLast Character: " + lastChar1 +
+                            "\nContains the letter i: " + containsI1 +
+                            "\nLowercase: " + str1LowerCase +
+                            "\nIs a palindrome: " + isPalindrome1 + "\n\n");
+
+        String str2 = InputUtility.getString("Enter a string", in);
+        int length2 = str2.length();
+        String first3chars2 = str2.substring(0, 3);
+        char lastChar2 = str2.charAt(length2 - 1);
+        boolean containsI2 = str2.contains("i");
+        String str2LowerCase = str2.toLowerCase();
+        StringBuilder strBuilder2 = new StringBuilder(); // information found on GeeksforGeeks 'Reverse a string in Java'
+        strBuilder2.append(str2LowerCase.replace(" ", ""));
+        boolean isPalindrome2;
+        if(strBuilder2.equals(strBuilder2.reverse())){
+            isPalindrome2 = true;
+        }else{
+            isPalindrome2 = false;
+        }
+        System.out.println("**Statistics**\n" +
+                            "Length: " + length2 +
+                            "\nFirst 3 characters: " + first3chars2 +
+                            "\nLast Character: " + lastChar2 +
+                            "\nContains the letter i: " + containsI2 +
+                            "\nLowercase: " + str2LowerCase +
+                            "\nIs a palindrome: " + isPalindrome2 + "\n\n");
+
+        if(str1.compareToIgnoreCase(str2) > 0){
+            System.out.println(str2 + " comes alpabetically before " + str1);
+        }else if(str1.compareToIgnoreCase(str2) < 0){
+            System.out.println(str1 + " comes alpabetically before " + str2);
+        }else{
+            System.out.println("The strings are the same.");
+        }
     }
 }
     
