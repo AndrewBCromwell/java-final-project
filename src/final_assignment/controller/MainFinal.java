@@ -5,10 +5,14 @@ import utilitys.InputUtility;
 import utilitys.TaskHandler;
 import java.util.Scanner;
 
+import final_assignment.model.DisplayShelf;
+
 public class MainFinal {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        int choice = 0;        
+        int choice = 0;  
+        DisplayShelf displayShelf = new DisplayShelf();
+        
         while (true) {
             String menuTitle = "Main Menu";
             String prompt = "Select an action";
@@ -23,16 +27,16 @@ public class MainFinal {
                 break;
             switch (choice) {
                 case 1:
-                    
+                    displayShelf.addSet(scanner);
                     break;
                 case 2:
-                    
+                    displayShelf.removeSet(scanner);
                     break;
                 case 3:
-                    
+                    displayShelf.showSetData();
                     break;
                 case 4:
-                    
+                    displayShelf.selectUpdateIndex(scanner);
                     break;
                 case 5:
                     

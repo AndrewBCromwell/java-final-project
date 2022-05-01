@@ -29,8 +29,8 @@ public class LegoIdeas extends LegoSet {
         this.fanDesigner = fanDesigner;
     }
 
-    private void validateFanDesigner(String name){
-        if(fanDesigner== null || fanDesigner.equals("")){
+    private void validateFanDesigner(String fanDesigner){
+        if(fanDesigner == null || fanDesigner.equals("")){
             throw new IllegalArgumentException("\"Fan Designer\" is requiered.");
         }
     }
@@ -38,6 +38,6 @@ public class LegoIdeas extends LegoSet {
     @Override
     public String toString(){
         return getName() + "\nLEGO " + series + "\n" + getSetNumber() + "\n" + 
-            getNumberOfPieces() + "pieces\nFan Designer: " + fanDesigner + "\n\n";
+            getNumberOfPieces() + " pieces\nFan Designer: " + fanDesigner + "\n";
     }
 }
