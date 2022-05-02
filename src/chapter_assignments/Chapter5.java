@@ -16,7 +16,7 @@ public class Chapter5 implements TaskHandler {
     public void handleTask(Scanner in) {
         int choice = 0;
         while (true) {
-            String menuTitle = "Chapter 4 Menu";
+            String menuTitle = "Chapter 5 Menu";
             String prompt = "Select an exercise";
             String[] menuOptions = {
                 "Exercise 1", "Exercise 2"
@@ -71,14 +71,19 @@ public class Chapter5 implements TaskHandler {
         UIUtility.showMenuTitle("Exercise 2");
         String str1 = InputUtility.getString("Enter a string", in);
         int length1 = str1.length();
-        String first3chars1 = str1.substring(0, 3);
+        String first3chars1;
+        if(length1 >= 3){
+            first3chars1 = str1.substring(0, 3);
+        } else{
+            first3chars1 = str1; 
+        }        
         char lastChar1 = str1.charAt(length1 - 1);
         boolean containsI1 = str1.contains("i");
         String str1LowerCase = str1.toLowerCase();
         StringBuilder strBuilder1 = new StringBuilder(); // information found on GeeksforGeeks 'Reverse a string in Java'
         strBuilder1.append(str1LowerCase.replace(" ", ""));
         boolean isPalindrome1;
-        if(strBuilder1.equals(strBuilder1.reverse())){
+        if(str1LowerCase.replace(" ", "").equals(strBuilder1.reverse().toString())){
             isPalindrome1 = true;
         }else{
             isPalindrome1 = false;
@@ -89,18 +94,23 @@ public class Chapter5 implements TaskHandler {
                             "\nLast Character: " + lastChar1 +
                             "\nContains the letter i: " + containsI1 +
                             "\nLowercase: " + str1LowerCase +
-                            "\nIs a palindrome: " + isPalindrome1 + "\n\n");
+                            "\nIs a palindrome: " + isPalindrome1 + "\n");
 
         String str2 = InputUtility.getString("Enter a string", in);
         int length2 = str2.length();
-        String first3chars2 = str2.substring(0, 3);
+        String first3chars2;
+        if(length2 >= 3){
+            first3chars2 = str2.substring(0, 3);
+        } else{
+            first3chars2 = str2; 
+        }
         char lastChar2 = str2.charAt(length2 - 1);
         boolean containsI2 = str2.contains("i");
         String str2LowerCase = str2.toLowerCase();
         StringBuilder strBuilder2 = new StringBuilder(); // information found on GeeksforGeeks 'Reverse a string in Java'
         strBuilder2.append(str2LowerCase.replace(" ", ""));
         boolean isPalindrome2;
-        if(strBuilder2.equals(strBuilder2.reverse())){
+        if(str2LowerCase.replace(" ", "").equals(strBuilder2.reverse().toString())){
             isPalindrome2 = true;
         }else{
             isPalindrome2 = false;
@@ -111,12 +121,12 @@ public class Chapter5 implements TaskHandler {
                             "\nLast Character: " + lastChar2 +
                             "\nContains the letter i: " + containsI2 +
                             "\nLowercase: " + str2LowerCase +
-                            "\nIs a palindrome: " + isPalindrome2 + "\n\n");
+                            "\nIs a palindrome: " + isPalindrome2 + "\n");
 
         if(str1.compareToIgnoreCase(str2) > 0){
-            System.out.println(str2 + " comes alpabetically before " + str1);
+            System.out.println("\"" + str2 + "\" comes alpabetically before \'" + str1 + "\"");
         }else if(str1.compareToIgnoreCase(str2) < 0){
-            System.out.println(str1 + " comes alpabetically before " + str2);
+            System.out.println("\"" + str1 + "\" comes alpabetically before \"" + str2 + "\"");
         }else{
             System.out.println("The strings are the same.");
         }
