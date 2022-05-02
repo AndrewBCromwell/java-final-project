@@ -70,6 +70,10 @@ public class Chapter5 implements TaskHandler {
     public void exercise2(Scanner in) {
         UIUtility.showMenuTitle("Exercise 2");
         String str1 = InputUtility.getString("Enter a string", in);
+        if(str1.equals("") || str1.equals(null)){
+            System.out.println("Can't work with empty string.");
+            return;
+        }
         int length1 = str1.length();
         String first3chars1;
         if(length1 >= 3){
@@ -97,6 +101,10 @@ public class Chapter5 implements TaskHandler {
                             "\nIs a palindrome: " + isPalindrome1 + "\n");
 
         String str2 = InputUtility.getString("Enter a string", in);
+        if(str2.equals("") || str2.equals(null)){
+            System.out.println("Can't work with empty string.");
+            return;
+        }
         int length2 = str2.length();
         String first3chars2;
         if(length2 >= 3){
