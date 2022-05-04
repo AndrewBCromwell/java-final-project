@@ -128,6 +128,8 @@ public class Chapter4 implements TaskHandler {
         System.out.println(fraction8.mixedNumber());
         Fraction fraction9 = new Fraction(-13, -5);
         System.out.println(fraction9.mixedNumber());
+        Fraction fraction10 = new Fraction(-2, 3);
+        System.out.println(fraction10.mixedNumber());
     }
 
     public void exercise7(Scanner in) {
@@ -246,8 +248,13 @@ class Fraction{
             mixedNumber = mixedNumber + intPart + " " + fractionPart.toString();
         } else if(simplifiedFraction.getNumerator() < simplifiedFraction.getDenominator() && simplifiedFraction.getNumerator() < 0){ // negative fraction
             int intPart = simplifiedFraction.getNumerator() / simplifiedFraction.getDenominator();
-            Fraction fractionPart = new Fraction((simplifiedFraction.getNumerator() * -1) + (intPart * simplifiedFraction.getDenominator()), simplifiedFraction.getDenominator());
-            mixedNumber = mixedNumber + intPart + " " + fractionPart.toString();
+            if(intPart == 0){
+                mixedNumber = mixedNumber + simplifiedFraction.toString();
+            }else{
+                Fraction fractionPart = new Fraction((simplifiedFraction.getNumerator() * -1) + (intPart * simplifiedFraction.getDenominator()), simplifiedFraction.getDenominator());
+                mixedNumber = mixedNumber + intPart + " " + fractionPart.toString();
+            }
+            
         } else{ // numerator less than denominator, i.e. proper fraction
             mixedNumber = simplifiedFraction.toString();
         }

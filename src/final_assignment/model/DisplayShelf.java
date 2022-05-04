@@ -37,11 +37,19 @@ public class DisplayShelf {
     }
 
     public void removeSet(Scanner in){
-        System.out.println("\n## Remove Set ##\n");
-
-        int removeIndex = InputUtility.getInt("Which index on the shelf would you like to remove the set from? (0 - " + (setCount - 1) + ") ", in);
-        if(removeIndex < 0 || removeIndex > setCount - 1){
-            System.out.println("There is no LEGO set at that index.");
+        String menuTitle = "## Remove A Set ##";
+        String prompt = "Which set do you want to remove?";
+        String[] menuOptions = new String[setCount];
+        for(int i = 0; i < setCount; i++){
+            menuOptions[i] = sets[i].toString();
+        }
+        int removeIndex = UIUtility.showMenuOptions(menuTitle, prompt, menuOptions, in) - 1;
+        if(removeIndex == menuOptions.length){
+            return;
+        }
+        if(removeIndex < 0 || removeIndex > menuOptions.length){
+            System.out.println("There is no LEGO set there.\nExiting update method");
+            return;
         } else{
             while(removeIndex < setCount){ // repetes until the removeIndex refers to the last set on the shelf.
                 sets[removeIndex] = sets[++removeIndex]; // replace set at remove index index with the set in the next index.
@@ -145,5 +153,5 @@ public class DisplayShelf {
         }        
     }
 
-    
+
 }
