@@ -18,7 +18,7 @@ public class MainFinal {
             String prompt = "Select an action";
             String[] menuOptions = {
                 "Add LEGO set", "Remove LEGO set", "Show set data", "Update data", 
-                "Sort LEGO sets", "Change order", "Replace LEGO set", 
+                "Sort LEGO sets", "Change order", "Replace LEGO set", "Total pieces"
             };
             choice = UIUtility.showMenuOptions(menuTitle, prompt, menuOptions, scanner);
             if (choice == 0)
@@ -39,10 +39,17 @@ public class MainFinal {
                     displayShelf.selectUpdateIndex(scanner);
                     break;
                 case 5:
-                    
+                    displayShelf.selectSortType(scanner);
                     break;
                 case 6:
-                    
+                    displayShelf.changeOrder(scanner);
+                    break;
+                case 7:
+                    displayShelf.replaceSet(scanner);
+                    break;
+                case 8:
+                    displayShelf.totalPieces();
+                    break;
             }
             UIUtility.pressEnterToContinue(scanner);
         }

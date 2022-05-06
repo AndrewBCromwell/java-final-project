@@ -90,8 +90,8 @@ public class LegoSet implements Comparable<LegoSet> {
 
     @Override
     public int compareTo(LegoSet other){
-
-        return 0;
+        int difference = this.name.compareTo(other.getName());
+        return difference;
     }
 
 }
